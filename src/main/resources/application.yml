@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: REGISTRATION_SYSTEM
+
+  profiles:
+    active: prod
+
+  datasource:
+    url: jdbc:postgresql://ec2-54-84-182-168.compute-1.amazonaws.com:5432/d895eaegeb6nl5
+    password: e093b0aabaa3ccb489b7f1da2e0273b8719f580675b47d54edfee4070aa8d2fa
+    username: ntsjmjvqjifccz
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
