@@ -19,10 +19,10 @@ import java.util.Collections;
 @AllArgsConstructor
 @Entity
 @Table(
-        name = "user",
+        name = "app_user",
         uniqueConstraints = {
                 @UniqueConstraint(
-                        name = "user_emial_unique",
+                        name = "app_user_emial_unique",
                         columnNames = "email"
                 )
         }
@@ -30,8 +30,8 @@ import java.util.Collections;
 public class User implements UserDetails {
 
     @Id
-    @SequenceGenerator(name="user_seq", sequenceName = "user_seq", allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "user_seq")
+    @SequenceGenerator(name="app_user_seq", sequenceName = "app_user_seq", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "app_user_seq")
     private Long id;
 
     @Column(nullable = false)
